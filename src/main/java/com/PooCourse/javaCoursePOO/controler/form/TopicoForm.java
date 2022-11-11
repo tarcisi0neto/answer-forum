@@ -4,12 +4,18 @@ import com.PooCourse.javaCoursePOO.modelo.Curso;
 import com.PooCourse.javaCoursePOO.modelo.Topico;
 import com.PooCourse.javaCoursePOO.repository.CursoRepository;
 import com.PooCourse.javaCoursePOO.repository.TopicoRepository;
+import org.hibernate.validator.constraints.Length;
 import org.jetbrains.annotations.NotNull;
+
+import javax.validation.constraints.NotEmpty;
 
 public class TopicoForm {
 
+    @NotNull @NotEmpty @Length(min = 5)
     private String titulo;
+    @NotNull @NotEmpty @Length(min = 15)
     private String mensagem;
+    @NotNull @NotEmpty @Length(min = 5)
     private String nomeCurso;
 
 
